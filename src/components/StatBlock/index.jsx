@@ -1,6 +1,6 @@
 import NumberInput from '../NumberInput';
 
-function StatGroup({labelName1, labelName2, width="min(5.5vw, 2.5rem)", max=99}) {
+function StatBlock({labelName1, labelName2, width="min(5.5vw, 2.5rem)", max=99}) {
     return(
         <div style={{display:'flex', gap:'0.5rem'}}>
             <NumberInput labelName={labelName1} width={width} max={max} />
@@ -9,4 +9,4 @@ function StatGroup({labelName1, labelName2, width="min(5.5vw, 2.5rem)", max=99})
     )
 };
 
-export default StatGroup;
+export default StatBlock;

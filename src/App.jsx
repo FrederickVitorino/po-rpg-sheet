@@ -4,6 +4,8 @@ import Main from './pages/Main';
 function App(){
     return(
         <main>
+            {/* W.I.P: Criar uma nav bar para alternar entre as pages Main, Attacks-Inventory e Powers-Rituals*/}
+
             <div className="info">
                 <TextInput labelName="Player" width="min(28vw, 17.5rem)" />
                 <TextInput labelName="Character" width="min(28vw, 17.5rem)" />

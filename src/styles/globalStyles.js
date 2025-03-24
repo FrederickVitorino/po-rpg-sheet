@@ -19,13 +19,23 @@ const GlobalStyle = createGlobalStyle`
     }
 
     main{
-        margin: 2% 4%; 
+        margin: 1% 2%; 
         border: 0.0625rem white solid;
         display: grid;
         grid-template-areas: 
         'info title'
         'section section';
         grid-template-columns: auto 35vw;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield; /* Firefox */
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none; /* Chrome, Safari, Edge, Opera */
+        margin: 0;
     }
 `;
 
