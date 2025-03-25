@@ -3,8 +3,17 @@ import NumberInput from '../../components/NumberInput';
 import TextInput from '../../components/TextInput';
 import StatBlock from '../../components/StatBlock';
 import SkillRow from '../../components/SkillRow';
+import DescInput from '../../components/DescInput';
 
 function Main(){
+    const skillNames = [
+        'Acrobatics', 'Aim', 'Crime', 'Initiative', 'Pilotage*', 'Reflex', 'Stealth', 
+        'Current Affairs*', 'Investigation', 'Medicine', 'Occultism*', 'Profession*', 
+        'Science*', 'Survival', 'Tactics*', 'Technology*', 'Fortitude', 'Athletics', 
+        'Fight', 'Arts*', 'Deception', 'Diplomacy', 'Animal Handling*', 'Intimidation', 
+        'Intuition', 'Perception', 'Religion*', 'Will'
+    ];
+
     return(
         <StyledMain>
             <Attributes>
@@ -22,7 +31,7 @@ function Main(){
                 </div>
             </Attributes>
 
-            <Skills> {/* W.I.P: Alterar as proporções dessa grid-area para deixá-la menor em telas com width grande*/}
+            <Skills>
                 <div className='centerVertical'>Skills</div>
                 <div className='centerHorizontal' style={{ display: 'flex', justifyContent: 'space-around' }}>
                     <span>Skill Name</span>
@@ -30,35 +39,9 @@ function Main(){
                     <span>Bonus</span>
                 </div>
                 
-                {/* W.I.P: Criar um array com o nome das Skills e utilizar map nela para criar as 28 SkillRow */ }
-                <SkillRow labelName={'Acrobatics'} />
-                <SkillRow labelName={'Aim'} />
-                <skillRow labelName={'Crime'} />
-                <SkillRow labelName={'Initiative'} />
-                <SkillRow labelName={'Pilotage*'} />
-                <SkillRow labelName={'Reflex'} />
-                <SkillRow labelName={'Stealth'} />
-                <SkillRow labelName={'Current Affairs*'} />
-                <SkillRow labelName={'Investigation'} />
-                <SkillRow labelName={'Medicine'} />
-                <SkillRow labelName={'Occultism*'} />
-                <SkillRow labelName={'Profession*'} />
-                <SkillRow labelName={'Science*'} />
-                <SkillRow labelName={'Survival'} />
-                <SkillRow labelName={'Tactics*'} />
-                <SkillRow labelName={'Technology*'} />
-                <SkillRow labelName={'Fortitude'} />
-                <SkillRow labelName={'Athletics'} />
-                <SkillRow labelName={'Fight'} />
-                <SkillRow labelName={'Arts*'} />
-                <SkillRow labelName={'Deception'} />
-                <SkillRow labelName={'Diplomacy'} />
-                <SkillRow labelName={'Animal Handling*'} />
-                <SkillRow labelName={'Intimidation'} />
-                <SkillRow labelName={'Intuition'} />
-                <SkillRow labelName={'Perception'} />
-                <SkillRow labelName={'Religion*'} />
-                <SkillRow labelName={'Will'} />
+                {skillNames.map((skill, index) => (
+                    <SkillRow key={index} labelName={skill} />
+                ))}
             </Skills>
 
             <Stats>
@@ -74,7 +57,10 @@ function Main(){
             </Stats>
 
             <Description>
-                {/* W.I.P: Criar um componente de TextArea para a descrição do personagem */}
+                <DescInput labelName={'Appearance'} />
+                <DescInput labelName={'Backstory'} />
+                <DescInput labelName={'Personality'} />
+                <DescInput labelName={'Objective'} />
             </Description>
         </StyledMain>
     )

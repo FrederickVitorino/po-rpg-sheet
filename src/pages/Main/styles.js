@@ -5,8 +5,8 @@ export const StyledMain = styled.div`
     grid-template-areas:
     'attributes skills'
     'stats skills'
-    'description description';
-    grid-template-columns: 60% 40%; 
+    'description skills';
+    grid-template-columns: 1fr min(25rem, 40%); 
 `;
 
 export const Attributes = styled.div`
@@ -28,4 +28,8 @@ export const Stats = styled.div`
 
 export const Description = styled.div`
     grid-area: description;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0.2rem;
 `;
