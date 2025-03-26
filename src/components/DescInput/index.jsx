@@ -4,7 +4,7 @@ function DescInput({labelName}){
     return(
         <div className="centerHorizontal">
             <label>{labelName}:</label>
-            <StyledDescInput rows={5} cols={40} />
+            <StyledDescInput rows={4} cols={40} />
         </div>
     )
 };

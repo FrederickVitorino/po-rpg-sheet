@@ -1,10 +1,26 @@
+import React, { useState } from "react";
 import TextInput from './components/TextInput';
+import NavButton from './components/NavButton';
 import Main from './pages/Main';
+import AttInv from './pages/Attacks-Inventory';
+import PowRit from './pages/Powers-Rituals';
 
 function App(){
+    const [currentPage, setCurrentPage] = useState("Main");
+    
+    const pages = {
+        Main: <Main />,
+        AttInv: <AttInv />,
+        PowRit: <PowRit />,
+    };
+
     return(
         <main>
-            {/* W.I.P: Criar uma nav bar para alternar entre as pages Main, Attacks-Inventory e Powers-Rituals*/}
+            <div className="nav">
+                <NavButton buttonName="Main" page="Main" setCurrentPage={setCurrentPage} />
+                <NavButton buttonName="Attacks/Inventory" page="AttInv" setCurrentPage={setCurrentPage} />
+                <NavButton buttonName="Powers/Rituals" page="PowRit" setCurrentPage={setCurrentPage} />            
+            </div>
 
             <div className="info">
                 <TextInput labelName="Player" width="min(28vw, 17.5rem)" />
@@ -20,8 +36,8 @@ function App(){
                     alt="Paranormal Order RPG Logo" />
             </div>
 
-            <div className="section">
-                <Main />
+            <div id="section" className="section">
+                {pages[currentPage]}
             </div>
         </main>
     );

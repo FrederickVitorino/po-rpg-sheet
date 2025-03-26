@@ -14,16 +14,19 @@ export const Attributes = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: min(2.5vw, 2.5rem);
 `;
 
 export const Skills = styled.div`
-    background-color: red;
     grid-area: skills;
 `;
 
 export const Stats = styled.div`
     grid-area: stats;
-    margin: 0rem 0.2rem;
+    margin: 0 0.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
 `;
 
 export const Description = styled.div`

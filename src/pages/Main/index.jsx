@@ -14,7 +14,9 @@ function Main(){
         'Intuition', 'Perception', 'Religion*', 'Will'
     ];
 
-    return(
+    {/* Estilizar e colorizar a page Main e depois iniciar as outras pages */}
+
+    return( 
         <StyledMain>
             <Attributes>
                 <span>Attributes</span>

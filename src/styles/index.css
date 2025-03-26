@@ -10,19 +10,24 @@
     gap: 0.5rem;
 }
 
+.nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    margin: 0.4rem 0;
+}
+
 .title{
     grid-area: title;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: aqua;
 }
 
 .info{
     grid-area: info;
     display: flex;
     flex-wrap: wrap;
-    background-color: tomato;
 }
 
 .info div{
@@ -31,5 +36,5 @@
 
 .section{
     grid-area: section;
-    background-color: palevioletred;
+
 }

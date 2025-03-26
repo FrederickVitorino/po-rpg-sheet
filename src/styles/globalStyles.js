@@ -22,7 +22,8 @@ const GlobalStyle = createGlobalStyle`
         margin: 1% 2%; 
         border: 0.0625rem white solid;
         display: grid;
-        grid-template-areas: 
+        grid-template-areas:
+        'nav title'
         'info title'
         'section section';
         grid-template-columns: auto 35vw;
